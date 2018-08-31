@@ -169,3 +169,18 @@ def set_volume(volume_level):
     headers = {"authorization": "Bearer " + Users.token['access_token'] + ""}
     resp = requests.put(endpoint,headers=headers)
     return redirect(url_for('main_view'))
+
+
+@app.route('/status')
+def server_status():
+    status_data = {}
+    if Users.token is None:
+        status_data['logged_in'] = "False"
+    else:
+        status_data['logged_in'] = "True"
+        client = oauth.create_client('spotify')
+        resp = client.get('me/player',token=Users.token).json()
+        device = resp['device']
+        status_data['device'] = device
+        logs.debug(status_data)
+    return status_data

@@ -179,7 +179,7 @@ def server_status():
     else:
         status_data['logged_in'] = "True"
         client = oauth.create_client('spotify')
-        resp = client.get('me/player',token=Users.token).json
+        resp = client.get('me/player',token=Users.token).json()
         device = resp['device']
         status_data['device'] = device
         logs.debug(status_data)

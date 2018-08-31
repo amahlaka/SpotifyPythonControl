@@ -106,7 +106,7 @@ def play():
 @app.route("/play", methods=['POST'])
 def play_post():
     uri=request.form['uri']
-    play_uri()(uri)
+    play_uri(uri)
     return redirect(url_for('main_view'))
 
 

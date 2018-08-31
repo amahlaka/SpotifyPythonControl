@@ -182,5 +182,6 @@ def server_status():
         resp = client.get('me/player',token=Users.token).json()
         device = resp['device']
         status_data['device'] = device
+        status_data['name'] = resp['item']['name']
         logs.debug(status_data)
     return jsonify(status_data)

@@ -105,6 +105,5 @@ venv.bak/
 secrets.txt
 secrets.txt
 secrets.txt
-*.txt
 secrets.txt
 .vscode/settings.json

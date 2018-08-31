@@ -132,6 +132,8 @@ def pause_playback():
 def playlist_post():
     uri=request.form['playlist']
     playlist(uri)
+    return redirect(url_for('main_view'))
+
 
 @app.route("/playlist/<song_uri>")
 def playlist(song_uri):

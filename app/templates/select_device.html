@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <br>
+        <div>
+            <form>
+            {% for item in devices %}
+                <div>
+                    <a>{{item['name']}}</a>
+                    <button type="submit" formaction="/devices/{{item['id']}}" >Use This Device</button>
+                </div>
+            {%endfor%}
+            </form>
+        </div>
+
+    </body>
+</html>

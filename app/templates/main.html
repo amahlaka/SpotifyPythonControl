@@ -1,22 +1,27 @@
 <html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
     <body>
-        <div>
+        <div class="form-group">
             <form>
-            <button type=submit formmethod="GET" formaction="/play">Play</button>
-            <button type=submit formmethod="GET" formaction="/stop">Pause</button>
-            <button type=submit formmethod="GET" formaction="/next">Next</button>
-            <button type=submit formmethod="GET" formaction="/prev">Prev</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/play">Play</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/stop">Pause</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/next">Next</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/prev">Prev</button>
             <br>
-            <button type=submit formmethod="GET" formaction="/login">Login</button>
-            <button type=submit formmethod="GET" formaction="/devices">Devices</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/login">Login</button>
+            <button class="form-control" type=submit formmethod="GET" formaction="/devices">Devices</button>
         </form>
+    </div>
+    <div class="form-group">
         <form action="/playlist" method="POST">
-            <input type="text" name="playlist">
-            <button type="submit">Play This Playlist</button>
+            <input class="form-control" type="text" name="playlist">
+            <button class="btn" type="submit">Play This Playlist</button>
         </form>
         <form action="/play" method="POST">
-            <input type="text" name="uri">
-            <button type="submit">Play This Song</button>
+            <input class="form-control" type="text" name="uri">
+            <button class="btn" type="submit">Play This Song</button>
         </form>
         </div>
     </body>

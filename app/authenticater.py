@@ -103,6 +103,13 @@ def play():
     return redirect(url_for('main_view'))
 
 
+@app.route("/play", methods=['POST'])
+def play_post():
+    uri=request.form['uri']
+    play_uri()(uri)
+    return redirect(url_for('main_view'))
+
+
 @app.route("/play/<song_uri>")
 def play_uri(song_uri):
     if Users.token is None:

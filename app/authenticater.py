@@ -1,3 +1,11 @@
+"""
+SpotifyPythonControl
+By: Amahlaka
+
+Disclaimer:
+I hold no responsibility if this grinds up your cat, burns your house or pops your eye etc etc...
+10.11.2018
+"""
 from app import app
 from flask import render_template, flash, redirect, url_for, request, json, jsonify
 from authlib.flask.client import OAuth

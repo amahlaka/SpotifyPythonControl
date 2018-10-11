@@ -4,6 +4,6 @@ from flask import Flask
 
 
 app = Flask(__name__)
-app.secret_key = ''  # Generate a secret key here
+app.secret_key = ''  # Paste the generated key here
 
 from app import authenticater

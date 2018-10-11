@@ -50,7 +50,7 @@ def login_page():
     redirect_uri = url_for('callback', _external=True)
     return oauth.spotify.authorize_redirect(redirect_uri)
 
-
+@app.route("/")
 @app.route("/home")
 def home():
     return redirect(url_for('main_view'))

@@ -20,7 +20,7 @@ mccabe==0.6.1
 pycodestyle==2.4.0
 pycparser==2.18
 pylint==2.1.1
-requests==2.19.1
+requests==2.20.0
 SimpleLogs==0.3
 six==1.11.0
 urllib3==1.24.2

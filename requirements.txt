@@ -23,6 +23,6 @@ pylint==2.1.1
 requests==2.20.0
 SimpleLogs==0.3
 six==1.11.0
-urllib3==1.24.2
+urllib3==1.26.5
 Werkzeug==0.15.3
 wrapt==1.10.11
